@@ -12,3 +12,17 @@ build/
 .env
 *.log
 .vscode/
+*.mp4
+*.avi
+*.mov
+*.flv
+*.wmv
+*.mkv
+*.webm
+*.vob
+*.ogv
+*.ogg
+*.drc
+*.gif
+*.gifv
+*.mng
