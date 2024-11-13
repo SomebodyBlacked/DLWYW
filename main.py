@@ -1,10 +1,12 @@
 from pytubefix import YouTube
-from pytubefix.cli import on_progress
+import sys
 
-url = "https://www.youtube.com/watch?v=NIHjaSA9a9o"
+if len(sys.argv) < 2:
+  print("Usage: python main.py <YouTube URL>")
+  sys.exit(1)
 
-yt = YouTube(url, on_progress_callback = on_progress)
+url = sys.argv[1]
+
+yt = YouTube(url)
 print(yt.title)
- 
-ys = yt.streams.get_highest_resolution()
-ys.download()
+yt.streams.get_highest_resolution().download()
